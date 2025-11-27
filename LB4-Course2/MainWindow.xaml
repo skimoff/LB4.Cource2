@@ -1,0 +1,16 @@
+﻿<Window x:Class="LB4_Course2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LB4_Course2"
+        mc:Ignorable="d"
+        Height="400"
+        Width="200">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Height="100" Content="Завдання №1" Click="ButtonBase_OnClick1"/>
+            <Button Height="100" Content="Завдання №2" Click="ButtonBase_OnClick2"/>
+        </StackPanel>
+    </Grid>
+</Window>

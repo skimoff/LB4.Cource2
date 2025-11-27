@@ -1,0 +1,70 @@
+﻿<Window x:Class="LB4_Course2.Task1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:LB4_Course2"
+        mc:Ignorable="d"
+        Title="Calculator" 
+        Height="600" 
+        Width="400" 
+        MinHeight="400" 
+        MinWidth="200">
+    <Grid x:Name="MainRoot" ShowGridLines="False" Background="#1E1E1E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        
+        <UniformGrid Grid.Row="1"
+                     Rows="4"
+                     Columns="4">
+            
+            <Button Content="CE" Click="Button_CE_Click" Style="{StaticResource OtherButtonStyle}"/>
+            <Button Content="C" Click="Button_C_Click" Style="{StaticResource OtherButtonStyle}"/>
+            <Button Content="Del" Click="Button_Del_Click" Style="{StaticResource OtherButtonStyle}"/>
+            <Button Content="*" Style="{StaticResource OtherButtonStyle}"/>
+            <Button Content="7" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="8" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="9" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="/" Style="{StaticResource OtherButtonStyle}"/>
+            <Button Content="4" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="5" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="6" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="-" Style="{StaticResource OtherButtonStyle}"/>
+            <Button Content="1" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="2" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="3" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Content="+" Style="{StaticResource OtherButtonStyle}"/>
+        </UniformGrid>
+        <Border Grid.Row="2">
+            <Grid ShowGridLines="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Grid.Column="0" Style="{StaticResource OtherButtonStyle}" Content="."/>
+                <Button Grid.Column="1" Style="{StaticResource DigitButtonStyle}" Content="0"/>
+                <Button Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource OtherButtonStyle}" Content="=" Click="Button_Calculator_Click"/>
+            </Grid>
+        </Border>
+        <Border Grid.Row="0"
+                Background="#252525"
+                Margin="0 5 0 5">
+            <Grid ShowGridLines="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Grid.Row="0" Style="{StaticResource HistoryTextBlockStyle}" x:Name="History"/>
+                <TextBlock Grid.Row="1" Style="{StaticResource ResultTextBlockStyle}" x:Name="Result"/>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</Window>
