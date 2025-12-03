@@ -25,3 +25,4 @@ D:\Универ\Course2\LB4-Course2\LB4-Course2\obj\Debug\net9.0-windows\Task2.b
 D:\Универ\Course2\LB4-Course2\LB4-Course2\obj\Debug\net9.0-windows\Resources\ButtonStyle.baml
 D:\Универ\Course2\LB4-Course2\LB4-Course2\obj\Debug\net9.0-windows\Resources\TextBlockStyle.baml
 D:\Универ\Course2\LB4-Course2\LB4-Course2\obj\Debug\net9.0-windows\App.baml
+D:\Универ\Course2\LB4-Course2\LB4-Course2\obj\Debug\net9.0-windows\LB4-Course2.sourcelink.json

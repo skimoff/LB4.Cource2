@@ -26,7 +26,8 @@
 
         <GroupBox Grid.Row="0"
                   Grid.Column="0"
-                  Margin="10">
+                  Margin="10"
+                  BorderBrush="Black">
             <GroupBox.Header>
                 <TextBlock Text="Автозаправка" />
             </GroupBox.Header>
@@ -56,7 +57,8 @@
                               Margin="0 5 0 0"
                               Height="20"
                               VerticalAlignment="Top"
-                              x:Name="FuelComboBox">
+                              x:Name="FuelComboBox"
+                              SelectionChanged="Fuel_SelectionChanged">
                         <ComboBoxItem Content="A-95" IsSelected="True" />
                         <ComboBoxItem Content="A-92" />
                         <ComboBoxItem Content="Дизель" />
@@ -90,10 +92,12 @@
                                 VerticalAlignment="Center"
                                 Content="Кількість"
                                 IsChecked="True"
+                                Checked="FuelMode_Checked"
                                 Margin="0 0 0 7" />
                             <RadioButton
                                 VerticalAlignment="Center"
                                 x:Name="SumRadioButton"
+                                Checked="FuelMode_Checked"
                                 Content="Сума" />
                         </StackPanel>
                     </Border>
@@ -140,7 +144,9 @@
                     </Grid>
 
                 </StackPanel>
-                <GroupBox Height="100">
+                <GroupBox Height="100"
+                          BorderBrush="Black"
+                          VerticalAlignment="Bottom">
                     <GroupBox.Header>
                         <TextBlock Text="До сплати" />
                     </GroupBox.Header>
@@ -165,7 +171,8 @@
         <!--Мінікафе-->
         <GroupBox Grid.Row="0"
                   Grid.Column="1"
-                  Margin="10">
+                  Margin="10"
+                  BorderBrush="Black">
             <GroupBox.Header>
                 <TextBlock Text="Міні-Кафе" />
             </GroupBox.Header>
@@ -301,7 +308,8 @@
                           Grid.Column="0"
                           Grid.ColumnSpan="3"
                           Height="100"
-                          VerticalAlignment="Bottom">
+                          VerticalAlignment="Bottom"
+                          BorderBrush="Black">
                     <GroupBox.Header>
                         <TextBlock Text="До сплати:"/>
                     </GroupBox.Header>

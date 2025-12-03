@@ -34,6 +34,8 @@ namespace LB4_Course2
 
         private void Fuel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (FuelComboBox == null || FuelPriceTextBlock == null || FuelTotalTextBlock == null) return;
+            
             double currentPrice = 0.0;
             string fuelType = string.Empty;
 
@@ -80,7 +82,7 @@ namespace LB4_Course2
 
         private void FuelMode_Checked(object sender, RoutedEventArgs e)
         {
-            if (AmountRadioButton == null || SumRadioButton == null) return;
+            if (AmountRadioButton == null || SumRadioButton == null || AmountTextBox == null || SumTextBox == null) return;
             
             if (AmountRadioButton.IsChecked == true)
             {
@@ -216,9 +218,9 @@ namespace LB4_Course2
         {
             InitializePrices();    
             
-            FuelComboBox.SelectionChanged += Fuel_SelectionChanged;
-            
-            Fuel_SelectionChanged(null, null);
+           
+            FuelMode_Checked(null, null);
+            //Fuel_SelectionChanged(null, null);
             
             if (AmountTextBox.Text == string.Empty) AmountTextBox.Text = "0";
         }
